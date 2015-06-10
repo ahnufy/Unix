@@ -1,9 +1,14 @@
 #include <stdio.h>
+#include <fcntl.h>
+
 
 int main()
 {
-	int i = 0;
-	int s = i++ + ++i;
-	printf("%d\n %d\n",s,i);
+	int fd = 0;
+	
+	fd = open("main.c",O_RDWR);
+
+	printf("%d\n",fd);
+
 	return 0;
 }
